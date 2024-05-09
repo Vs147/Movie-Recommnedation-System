@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import requests
+import gzip
 
 
 
@@ -32,11 +33,14 @@ st.title("Movie Recommendation System")
 movie_dict=pickle.load(open("movies_dict.pkl",'rb'))
 movies=pd.DataFrame(movie_dict)
 
-# similarity=pickle.load(open("similarity.pkl",'rb'),encoding='latin1')
-import pickle
+with gzip.open('test.pklz', 'rb') as ifp:
+    print(pickle.load(ifp))
 
-with open('Similarity.pkl', 'rb') as f:
-    similarity = pickle.load(f, encoding='latin1')
+# similarity=pickle.load(open("similarity.pkl",'rb'),encoding='latin1')
+# import pickle
+
+# with open('Similarity.pkl', 'rb') as f:
+#     similarity = pickle.load(f, encoding='latin1')
 
 
 
