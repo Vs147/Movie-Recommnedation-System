@@ -33,11 +33,11 @@ st.title("Movie Recommendation System")
 movie_dict=pickle.load(open("movies_dict.pkl",'rb'))
 movies=pd.DataFrame(movie_dict)
 
-with gzip.open('test1.pklz', 'r') as ifp:
-    similarity=pickle.load(ifp)
+# with gzip.open('test1.pklz', 'rb') as ifp:
+#     similarity=pickle.load(ifp)
     # similarity=pickle.load(ifp)
 
-# similarity=pickle.load(open("similarity.pkl",'rb'),encoding='latin1')
+similarity=pickle.load(open("similarity.pkl",'rb'),encoding='latin1')
 # import pickle
 
 # with open('Similarity.pkl', 'rb') as f:
