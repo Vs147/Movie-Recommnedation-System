@@ -34,8 +34,8 @@ movie_dict=pickle.load(open("movies_dict.pkl",'rb'))
 movies=pd.DataFrame(movie_dict)
 
 with gzip.open('test.pklz', 'rb') as ifp:
-    print(pickle.load(ifp))
-    similarity=pickle.load(ifp)
+    similarity=print(pickle.load(ifp))
+    # similarity=pickle.load(ifp)
 
 # similarity=pickle.load(open("similarity.pkl",'rb'),encoding='latin1')
 # import pickle
